@@ -1,8 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
+import Head from "components/Head"
 
 export default () => (
   <div>
+    <Head pathname="/" />
     <h1>Hi, chjiyun!</h1>
     <div style={{ color: `purple` }}>
       <Link to="/" className="aLink" activeStyle={{ color: "salmon" }}>
