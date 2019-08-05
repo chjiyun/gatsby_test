@@ -9,7 +9,7 @@ module.exports = {
   plugins: [`gatsby-plugin-sass`, `gatsby-plugin-react-helmet`],
 
   siteMetadata: {
-    title: `Gatsby`,
+    siteTitle: `Gatsby`,
     siteUrl: `https://www.gatsbyjs.org`,
     description: `Blazing fast modern site generator for React`,
     twitter: "https://twitter.com",

@@ -2,19 +2,19 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql, useStaticQuery } from "gatsby"
 
-import gatsbyIcon from "assets/gatsby-icon.png"
+import gatsbyIcon from "@/assets/gatsby-icon.png"
 
-const Head = ({ pathname }) => {
+const Head = ({ pathname, title }) => {
   const {
     site: {
-      siteMetadata: { siteUrl, title, twitter, description },
+      siteMetadata: { siteUrl, siteTitle, twitter, description },
     },
   } = useStaticQuery(graphql`
     query SiteMetadata {
       site {
         siteMetadata {
           siteUrl
-          title
+          siteTitle
           twitter
           description
         }
@@ -23,9 +23,13 @@ const Head = ({ pathname }) => {
   `)
 
   return (
-    <Helmet defer={false} defaultTitle={title} titleTemplate={`%s | ${title}`}>
+    <Helmet
+      defer={false}
+      defaultTitle={siteTitle}
+      titleTemplate={`${title} | %s`}
+    >
       <html lang="zh-cmn-Hans" />
-      <title>{title}</title>
+      <title>{siteTitle}</title>
       <meta name="description" content={description} />
       {/* <meta name="image" content={image} /> */}
       <link rel="canonical" href={`${siteUrl}${pathname}`} />
@@ -38,7 +42,7 @@ const Head = ({ pathname }) => {
       <meta property="og:url" content={siteUrl} />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="zh-cmn-Hans" />
-      <meta property="og:site_name" content={title} />
+      <meta property="og:site_name" content={siteTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={`${siteUrl}${gatsbyIcon}`} />
       <meta property="og:image:width" content="512" />

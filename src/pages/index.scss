@@ -1,0 +1,16 @@
+.links {
+  display: flex;
+}
+.aLink {
+  display: inline-block;
+  margin-right: 8px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.spin {
+  width: 40px;
+  height: 40px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
