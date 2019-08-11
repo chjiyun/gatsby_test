@@ -8,7 +8,7 @@ export default () => (
   <div>
     <Head pathname="/about" title="关于" />
     <h1>ABOUT</h1>
-    <img src="/123.gif" alt="" />
+    {/* <img src="/123.gif" alt="" /> */}
     <div>
       <Link to="/">{`Back <————`}</Link>
     </div>
