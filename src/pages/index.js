@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Head from "@/components/Head"
+import dog from "@/assets/puppy-dog-ajax-spinner.svg"
 import "./index.scss"
 
 export default () => (
@@ -22,6 +23,8 @@ export default () => (
       <p>What a world.</p>
       <img src="https://source.unsplash.com/random/400x200" alt="" />
     </div>
-    <div className="spin" />
+    <div className="spin">
+      <img src={dog} alt="" />
+    </div>
   </div>
 )
