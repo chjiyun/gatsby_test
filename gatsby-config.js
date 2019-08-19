@@ -14,4 +14,8 @@ module.exports = {
     description: `Blazing fast modern site generator for React`,
     twitter: "https://twitter.com",
   },
+  proxy: {
+    prefix: "/api",
+    url: "http://127.0.0.1:7001",
+  },
 }

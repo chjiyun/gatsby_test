@@ -4,7 +4,7 @@ import Head from "@/components/Head"
 import "./index.scss"
 
 export default () => (
-  <div>
+  <div className="content">
     <Head pathname="/" title="首页" />
     <h1>Hi, chjiyun!</h1>
     <div>
